@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Timecard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>🕒 Employee Timecard System</h1>
+
+  <div class="card">
+    <input type="text" id="employee-name" placeholder="👤 Enter your name" required />
+    <button id="start-btn" class="primary">Start Timecard</button>
+  </div>
+
+  <div class="actions card" style="display:none;">
+    <button id="time-in-btn" class="success">🟢 Time In</button>
+    <button id="time-out-btn" class="warning">🔴 Time Out</button>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <table id="timecard-table">
+    <thead>
+      <tr>
+        <th>📅 Date</th>
+        <th>🕐 Time In</th>
+        <th>🕔 Time Out</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button id="download-btn" class="primary" style="display:none;">⬇️ Download Timecard</button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
